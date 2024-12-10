@@ -1,0 +1,39 @@
+Usage:
+
+  git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] [-e]
+  <tagname> [<commit> | <object>]
+  or: git tag -d <tagname>...
+  or: git tag [-n[<num>]] -l [--contains <commit>] [--no-contains <commit>]
+  [--points-at <object>] [--column[=<options>] | --no-column]
+  [--create-reflog] [--sort=<key>] [--format=<format>]
+  [--merged <commit>] [--no-merged <commit>] [<pattern>...]
+  or: git tag -v [--format=<format>] <tagname>...
+
+
+  -l --list             list tag names
+  --n=<n>               print <n> lines of each tag message
+  -d --delete           delete tags
+  -v --verify           verify tags
+  -h --help
+
+  Tag creation options
+
+  -a --annotate         annotated tag, needs a message
+
+  -m<message> --message=<message>
+                        tag message
+  -F<file> --file=<file>
+                        read message from file
+  -s --sign             annotated and GPG-signed tag
+  --cleanup=<mode>      how to strip spaces and #comments from message
+
+  -u<key-id> --local-user=<key-id>
+                        use another key to sign the tag
+  -f --force            replace the tag if exists
+
+  Tag listing options
+
+  --column=<style>      show tag list in columns
+  --sort=<type>         sort tags
+  --contains=<commit>   print only tags that contain the commit
+  --points-at=<object>  print only tags of the object
